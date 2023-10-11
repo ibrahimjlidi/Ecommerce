@@ -1,0 +1,24 @@
+<section id="blog" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-uppercase mb-4">Latest Blog Posts</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let post of blogPosts" class="col-lg-4 col-md-6 mb-4">
+          <div class="card blog-card">
+            <img *ngIf="post.imageUrl" [src]="post.imageUrl" alt="{{ post.title }}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.content }}</p>
+              <p class="card-text text-muted">
+                <small>By {{ post.author }} | {{ post.date | date:'mediumDate' }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

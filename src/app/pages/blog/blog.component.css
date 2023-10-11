@@ -1,0 +1,32 @@
+.blog-card {
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .blog-card .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .blog-card {
+      margin-bottom: 30px;
+    }
+  }
+  
